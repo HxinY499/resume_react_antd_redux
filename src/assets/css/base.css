@@ -1,0 +1,151 @@
+:root {
+  --font-color: #676767;
+  --nav-light: #eeeeee;
+  --nav-dark: #1c222b;
+  --main-light: #fff;
+  --main-dark: #252d3a;
+  --font-black: #000;
+  --nav-active: #d0d0d0;
+}
+
+html {
+  font-size: 1em;
+}
+
+* {
+  padding: 0;
+  margin: 0;
+}
+
+ul,
+ol,
+li {
+  list-style: none;
+}
+
+a {
+  text-decoration: none;
+}
+
+a:hover {
+  text-decoration: underline;
+}
+
+i,
+em {
+  font-style: normal;
+}
+
+input,
+textarea,
+button,
+select,
+a {
+  outline: none;
+  border: none;
+}
+
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+img {
+  border: none;
+  vertical-align: middle;
+}
+
+.content {
+  width: 90%;
+  height: 85vh;
+  background-color: var(--main-light);
+  margin-left: 4em;
+  margin-right: 4em;
+  flex-shrink: initial;
+  padding: 0 5em;
+  padding-bottom: 1em;
+  overflow: auto;
+  transition: all 0.3s;
+}
+.content::-webkit-scrollbar {
+  display: none;
+}
+.main-content {
+  display: flex;
+  align-items: center;
+  width: 100vw;
+  height: 100vh;
+}
+
+.ani-enter,
+.ani-appear {
+  opacity: 0;
+  transform: translate(0, -50%);
+}
+
+.ani-enter-active,
+.ani-appear-active {
+  opacity: 1;
+  transform: translate(0, 0);
+  transition: opacity 300ms, transform 300ms;
+}
+
+.ani-exit {
+  opacity: 1;
+}
+
+.ani-exit-active {
+  opacity: 0;
+  transform: translate(0, -50%);
+  transition: opacity 300ms, transform 300ms;
+}
+
+/* 容器宽的改变动画 */
+@keyframes widths {
+  from {
+    width: 0;
+  }
+
+  to {
+    width: 11.5em;
+  }
+}
+
+.title {
+  color: #e5e5e5;
+  font-weight: 900;
+  font-size: 6em;
+  text-align: center;
+  user-select: none;
+}
+
+.call {
+  display: block;
+  width: 10em;
+  height: 10em;
+}
+
+.ant-drawer-content,
+.ant-drawer-header {
+  background-color: var(--main-light) !important;
+  border: none !important;
+  color: var(--font-black) !important;
+}
+.ant-drawer-content .ant-form-item-label label,
+.ant-drawer-header button,
+.ant-drawer-title {
+  color: var(--font-black) !important;
+}
+
+.ant-modal-footer {
+  background-color: var(--main-light) !important;
+  border: none !important;
+}
+
+.ant-modal-header,
+.ant-modal-header .ant-modal-title,
+.ant-modal-body {
+  background-color: var(--main-light) !important;
+  color: var(--font-black) !important;
+  border: none !important;
+}
